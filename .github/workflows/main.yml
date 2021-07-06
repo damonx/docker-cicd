@@ -1,8 +1,12 @@
 name: CI to Docker Hub damonx
 
+# on:
+#   push:
+#     branches: [ main ]
 on:
   push:
-    branches: [ main ]
+    tags:
+      - "v*.*.*"
 
 jobs:
 
