@@ -23,9 +23,9 @@ public class TaxiFareCalculatorService
         kieSession.insert(taxiRide);
         kieSession.fireAllRules();
         kieSession.dispose();
-        System.out.println("!! RIDE FARE !! " + rideFare.getTotalFare());
         final TaxiFareResponse response = new TaxiFareResponse();
         response.setFinalFare(rideFare.getTotalFare());
+        response.setMiles(taxiRide.getDistanceInMile());
         return response;
     }
 }

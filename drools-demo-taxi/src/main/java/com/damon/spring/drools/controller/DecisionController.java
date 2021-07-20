@@ -17,7 +17,7 @@ public class DecisionController
     @Autowired
     private TaxiFareCalculatorService taxiService;
 
-    @GetMapping("/taxi")
+    @GetMapping("/v1/taxi/fare")
     private ResponseEntity<TaxiFareResponse> getDiscountPercent()
     {
         final TaxiRide taxiRide = new TaxiRide();

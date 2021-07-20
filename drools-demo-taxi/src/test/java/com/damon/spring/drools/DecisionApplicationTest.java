@@ -38,5 +38,6 @@ public class DecisionApplicationTest
         // THEN
         assertThat(result).isNotNull();
         assertThat(result.getResponseBody().getFinalFare()).isEqualTo(575L);
+        assertThat(result.getResponseBody().getMiles()).isEqualTo(190L);
     }
 }

@@ -4,6 +4,7 @@ public class Fare
 {
     private Long nightSurcharge;
     private Long rideFare;
+    private Long totalFare;
 
     public Fare()
     {
@@ -31,9 +32,14 @@ public class Fare
         this.rideFare = rideFare;
     }
 
+    public void setTotalFare(final Long totalFare)
+    {
+        this.totalFare = totalFare;
+    }
+
     public Long getTotalFare()
     {
-        return nightSurcharge + rideFare;
+        return totalFare;
     }
 
 }
