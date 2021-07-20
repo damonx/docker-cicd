@@ -29,7 +29,7 @@ public class DecisionApplicationTest
     {
         // WHEN
         final EntityExchangeResult<TaxiFareResponse> result =
-                webClient.get().uri("/taxi")
+                webClient.get().uri("/v1/taxi/fare")
                     .exchange()
                     .expectStatus().isEqualTo(HttpStatus.OK)
                     .expectBody(TaxiFareResponse.class)
