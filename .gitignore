@@ -1,0 +1,12 @@
+target
+.DS_Store
+.project
+.settings
+.classpath
+.factorypath
+.metadata
+.recommenders
+*.class
+.vscode
+.flattened-pom.xml
+tomcat

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  rule-postgres:
+    image: postgres:12
+    container_name: rule-engine-postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_DB=rules
+      - POSTGRES_PASSWORD=root
+    # volumes:
+    #   - "db-data-kong-postgres:/var/lib/postgresql/data"
