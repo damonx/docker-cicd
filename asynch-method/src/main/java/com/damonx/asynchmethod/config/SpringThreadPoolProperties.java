@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
  * Non-refreshScoped properties for thread pool executor.
  */
 @Component
-@ConfigurationProperties("dasl.health.spring")
+@ConfigurationProperties("async.spring")
 public class SpringThreadPoolProperties
 {
     private int threadPoolCorePoolSize;

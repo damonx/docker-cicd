@@ -40,6 +40,16 @@ public class AppRunner implements CommandLineRunner
         logger.info("--> " + page2.get());
         logger.info("--> " + page3.get());
 
+        final long start1 = System.currentTimeMillis();
+        final User page4 = gitHubLookupService.findUserSync("PivotalSoftware");
+        final User page5 = gitHubLookupService.findUserSync("CloudFoundry");
+        final User page6 = gitHubLookupService.findUserSync("Spring-Projects");
+
+        // Print results, including elapsed time
+        logger.info("Elapsed time: " + (System.currentTimeMillis() - start1));
+        logger.info("--> " + page4);
+        logger.info("--> " + page5);
+        logger.info("--> " + page6);
     }
 
 }
